@@ -1,0 +1,242 @@
+@font-face {
+    font-family: hind;
+    src: url(./HindSiliguri-SemiBold.ttf);
+}
+@font-face {
+    font-family: hindregular;
+    src: url(./ExpletusSans-Bold.ttf);
+}
+@font-face {
+    font-family: forBig;
+    src: url(./Spectral-MediumItalic.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body,main{
+    height: 100%;
+    width: 100%;
+}
+
+
+#navbar{
+    width: 100%;
+    height: 80px;
+    display: flex;
+}
+
+#leftNav{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+#leftNav h1{
+    font-size: 35px;
+    font-family: hind;
+    text-transform: uppercase;
+}
+
+#leftNav div{
+    background-color: #f0f0f0;
+    border-radius: 30px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    margin-right: 40px;
+}
+
+#leftNav i{
+    font-size: 20px;
+    color: rgba(102, 101, 101, 0.815);
+}
+
+#leftNav input{
+    border: none;
+    outline: none;
+    background: transparent;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+#rightNav{
+    width: 50%;
+    background-color:#b5322a;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#rightNav a {
+    color: #fafafa;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: hindRegular;
+    font-weight: 200;
+}
+section{
+    height: calc(100% - 80px);
+    width: 100%;
+    display: flex;
+}
+#leftContent{
+    width: 38%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+#leftContent h3{
+    font-size: 70px;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-family: forBig;
+    font-weight: 200;
+    position: absolute;
+    left: 20px;
+    top: 15%;
+}
+#table{
+display: flex;
+flex-direction: column;
+}
+.tableData{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    border-bottom: 1px solid rgba(161, 161, 161, 0.575);
+    padding: 10px;
+    position: relative;
+}
+.tableData h4{
+text-transform: capitalize;
+font-size: 18px;
+padding-left: 5px;
+font-weight: 300;
+font-family: hind;
+}
+.tableData div{
+height: 8px;
+width: 8px;
+position: absolute;
+left: 0px;
+top: 20px;
+background-color: #b5322a;
+border-radius: 50%;
+}
+#centerPng{
+    width: 24%;
+    height: 100%;
+    background: linear-gradient(to right, transparent 50%, #b5322a 50%);
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+#centerPng img{
+height: 520px;
+width: 100%;
+padding: 10px;
+padding-left: 22px;
+
+}
+#rightContent{
+    width: 38%;
+    height: 100%;
+    background-color: #b5322a;
+    display: flex;
+    align-items: center;
+    padding-right: 70px ;
+    padding-top: 30px;
+    flex-direction: column;
+}
+#disc h1{
+    font-size: 50px;
+    color: #fafafa;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+#insectDetails{
+    display: flex;
+    color: #fafafa;
+    font-size: 400;
+    padding: 20px;
+}
+#insectSize{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border-right: 2px solid #fafafa;  
+}
+#insectSize i {
+    font-size: 75px;
+    font-size: 200;
+}
+#insectSize p {
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 20px;
+}
+#insectQualitys{
+padding: 10px;
+}
+.qulatitys{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.qulatitys p {
+    font-size: 17px;
+}
+.qulatitys i{
+ font-size: 25px;
+}
+
+#prices h4{
+font-size: 35px;
+font-family: hind;
+color: rgba(202, 202, 54, 0.493);
+}
+.selectBtn{
+display: flex;
+align-items: center;
+gap: 2px;
+}
+#sus{
+display: flex;
+flex-direction: column;
+padding-bottom: 10px;
+}
+.selectBtn input{
+height: 20px;
+width: 20px;
+border-radius: 20px;
+border: none;
+outline: none;
+}
+.selectBtn p{
+    color: #fafafa;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: forBig;
+    letter-spacing: 1px;
+}
+button{
+    background-color:  rgba(202, 202, 54, 0.493);
+    border-radius: 20px;
+    color: black;
+    padding: 8px 40px 8px 40px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    font-family: hind;
+}
