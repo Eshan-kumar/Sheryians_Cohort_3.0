@@ -18,7 +18,6 @@ main{
     height: 70%;
     width: 100%;
     padding: 0px 30px;
-    background-color: lightseagreen;
 }
 .section1 nav{
     height: 15%;
@@ -94,26 +93,39 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 25px;
-}
-.searchBox:hover{
-    background-color: white;
-    .searchBox input{
-        background-color: white;
-    }
+    border-radius: 30px;
+    overflow: hidden;
 }
 .searchBox input{
+    background:none;
     height: 100%;
-    width: 80%;
+    width: 90%;
     border: none;
     outline:none;
     font-size: 1rem;
     border-radius: 30px;
     padding: 15px;
 }
+.searchBox:has(input:hover){
+    background-color: white;
+}
 .searchBox p{
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 600;
+}
+
+.searchBox .hoverAni{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.hoverAni:hover{
+    background-color: white;
 }
 .searchBox span{
     background-color:rgb(255, 100, 126);
@@ -124,19 +136,6 @@ main{
     justify-content: center;
     border-radius: 50%;
     color:white;
-}
-.searchBox .hoverAni{
-    height: 100%;
-    width: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 30px;
-
-
-}
-.hoverAni:hover{
-    background-color: white;
 }
 .examples{
     height: 15%;
@@ -167,9 +166,9 @@ main{
     border: none;
 }
 .section2{
-    height: 120%;
+    height: 130%;
     width: 100%;
-    padding: 30px;
+    padding: 30px 60px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 4fr 4fr 4fr;
@@ -216,15 +215,243 @@ main{
     border-radius: 20px;
 }
 
-.cat1{background-color: red; grid-area: cat1;}
-.cat2{background-color: lightblue;grid-area: cat2;}
-.cat3{background-color: lightseagreen;grid-area: cat3;}
-.cat4{background-color: lightcoral;grid-area: cat4;}
-.cat5{background-color: lightgoldenrodyellow;grid-area: cat5;}
-.cat6{background-color: lightgray;grid-area: cat6;}
-.cat7{background-color: lightgreen;grid-area: cat7;}
-.cat8{background-color: lightpink;grid-area: cat8;}
-.cat9{background-color: lightsalmon;grid-area: cat9;}
-.cat10{background-color: lightskyblue;grid-area: cat10;}
-.cat11{background-color: limegreen;grid-area: cat11;}
-.cat12{background-color: lightsteelblue;grid-area: cat12;}
+.cat1{
+    grid-area: cat1;   
+}
+#cat2{grid-area: cat2;}
+#cat3{grid-area: cat3;}
+#cat4{grid-area: cat4;}
+#cat5{grid-area: cat5;}
+#cat6{grid-area: cat6;}
+#cat7{grid-area: cat7;}
+#cat8{grid-area: cat8;}
+#cat9{grid-area: cat9;}
+#cat10{grid-area: cat10;}
+#cat11{grid-area: cat11;}
+#cat12{grid-area: cat12;}
+.card{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+}
+.catImg{
+    position: relative;
+    height: 90%;
+    width: 100%;
+    overflow: hidden;
+}
+.catImg img{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+.catImg video{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    pointer-events: none;
+}
+.catImg .hiddenDesc {
+    height: 40%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(transparent, black);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+    padding: 25px;
+    color: white;
+    font-size: 16px;
+}
+.catImg:hover .hiddenDesc{
+    transform: translateY(0%);
+    visibility: visible;
+}
+#buttons{
+    display: flex;
+    align-items: center;
+    gap:5px;
+}
+.hiddenDesc i{
+    padding: 15px 15px;
+    color: black;
+    background-color: white;
+    border-radius: 50%;
+}
+.descOfImg{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3px;
+}
+.descOfImg .p1{
+    display: flex;
+    align-items: center;
+    gap:12px;
+}
+.p1 img{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+}
+#subTag{
+    background-color: gray;
+    color: white;
+    padding: 2px;
+    font-size: 12px;
+}
+.p2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:5px;
+}
+.p2 i{
+    color:gray
+}
+
+.section3{
+    width: 100%;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.oneP{
+    height: 40px;
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.oneP #signup{
+    background-color: black;
+    color: white;
+    height: 30px;
+    width: 160px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 16px;
+    
+}
+.oneP #backtoTop{
+    background-color:gray;
+    color: white;
+    position:absolute;
+    left: 95%;
+    height: 50px;
+    width: 50px;
+    border: none;
+    outline: none;
+    font-size: 25px;
+    border-radius: 50%;
+}
+
+.twoP{
+    width: 100%;
+    overflow: hidden;
+    padding: 40px 0px;
+}
+.moving{
+    height: 100%;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    gap:40px;
+    animation: scroll 20s linear infinite;
+}
+.twoP .slot{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    width: clamp(120px,20vw,220px);
+    flex-shrink: 0;
+}
+.twoP img{
+    height: 80%;
+    width: 80%;
+    object-fit:contain;
+}
+@keyframes scroll {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-50%);
+    }
+    
+}
+
+.threeP{
+    width: 90%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap:25px;
+    padding: 20px 60px;
+    margin-top: 20px;
+}
+.threeP .logo{
+    width: clamp(120px,12vw,220px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.threeP img{
+    width: 80%;
+    height: auto;
+}
+.threeP .mid{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: clamp(14px,1vw,16px);
+    font-weight: 600;
+    flex-wrap: wrap;
+}
+.threeP .contacts{
+    height: 100%;
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:15px;
+    font-size: 1.5rem;
+    margin-left: 40px;
+}
+footer{
+    color: rgb(104, 104, 104);
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 65px;
+    margin-top: 20px;
+    font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.part1st{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap:30px;
+
+}
+.part2nd{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap:20px;
+}
