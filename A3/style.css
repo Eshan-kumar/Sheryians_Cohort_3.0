@@ -1,6 +1,6 @@
 @font-face {
     font-family: PT;
-    src: url(/A3/assets/PTSerif-Regular.ttf);
+    src: url(./assets/PTSerif-Regular.ttf);
 }
 *{
     margin: 0;
